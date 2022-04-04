@@ -58,8 +58,6 @@ class MainActivity : AppCompatActivity() {
         }
         
         binding.testing.setOnClickListener {
-
-//            val showDate: ShowDate = ShowDate()
             val name = showDate.showName()
             Log.d(TAG, "onCreate: ${name}")
         }

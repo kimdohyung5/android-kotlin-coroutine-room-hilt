@@ -14,5 +14,4 @@ class TodoViewModel @Inject constructor(private val repository: TodoRepository):
 
     fun insertTodo(todoModel: TodoModel) = viewModelScope.launch { repository.insertTodo(todoModel) }
     fun getTodoList() =  repository.getTodoList()
-
 }
