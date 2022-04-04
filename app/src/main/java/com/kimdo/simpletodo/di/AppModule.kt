@@ -2,6 +2,7 @@ package com.kimdo.simpletodo.di
 
 import android.content.Context
 import androidx.room.Room
+import com.kimdo.simpletodo.ShowDependent
 import com.kimdo.simpletodo.db.TodoDao
 import com.kimdo.simpletodo.db.TodoDatabase
 import dagger.Module
@@ -24,4 +25,9 @@ object AppModule {
     @Singleton
     @Provides
     fun provideTodoDao(todoDatabase: TodoDatabase): TodoDao = todoDatabase.todoDao()
+
+
+    @Singleton
+    @Provides
+    fun provideXXX(): ShowDependent = ShowDependent("kimdo is good xxx is bad")
 }

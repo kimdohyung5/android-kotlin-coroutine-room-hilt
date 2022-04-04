@@ -1,9 +1,7 @@
 package com.kimdo.simpletodo
 
-import javax.inject.Inject
-
-class ShowDependent @Inject constructor() {
+class ShowDependent constructor(private val name:String ) {
     fun showDependent():String {
-        return "showDependent"
+        return name
     }
 }

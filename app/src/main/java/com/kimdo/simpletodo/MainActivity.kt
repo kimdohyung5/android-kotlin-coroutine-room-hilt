@@ -35,8 +35,7 @@ class MainActivity : AppCompatActivity() {
         initViewModel()
         initButtons()
 
-        val name = showDate.showName()
-        Log.d(TAG, "onCreate: ${name}")
+
     }
     private fun initRecyclerView() {
         mTodoListAdapter = TodoListAdapter()
@@ -56,6 +55,13 @@ class MainActivity : AppCompatActivity() {
     private fun initButtons() {
         binding.openDialog.setOnClickListener {
             openAddTodoDialog()
+        }
+        
+        binding.testing.setOnClickListener {
+
+//            val showDate: ShowDate = ShowDate()
+            val name = showDate.showName()
+            Log.d(TAG, "onCreate: ${name}")
         }
     }
 

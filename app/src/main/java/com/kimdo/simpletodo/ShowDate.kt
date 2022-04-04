@@ -2,10 +2,9 @@ package com.kimdo.simpletodo
 
 import javax.inject.Inject
 
-class ShowDate @Inject constructor( ){
+class ShowDate @Inject constructor( private var showDependent: ShowDependent ){
 
-    var showDependent: ShowDependent? = null
     fun showName() : String{
-        return "kimdo"
+        return showDependent.showDependent()
     }
 }
